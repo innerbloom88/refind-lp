@@ -1,0 +1,2492 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>REFIND ME JOURNEY — がんばってきた人生の途中で、もう一度「私」に還る旅</title>
+  <meta name="description" content="がんばってきた30〜50代の女性へ。アートと内省を通じて、自分の感情とつながり直す4か月間の旅。REFIND ME JOURNEY。" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Noto+Serif+JP:wght@200;300;400&family=Noto+Sans+JP:wght@200;300;400&display=swap" rel="stylesheet" />
+
+  <style>
+    /* =============================================
+       DESIGN SYSTEM — Soft Light × Museum Stillness
+       ============================================= */
+
+    :root {
+      --font-display: 'Cormorant Garamond', 'Georgia', serif;
+      --font-serif:   'Noto Serif JP', 'Georgia', serif;
+      --font-sans:    'Noto Sans JP', sans-serif;
+
+      --ivory:        #faf8f5;
+      --ivory-warm:   #f5f0e8;
+      --ivory-deep:   #ede8df;
+      --blush:        #e8ddd5;
+      --blush-mid:    #d9ccc4;
+      --rose-muted:   #c4a99a;
+      --rose-deep:    #b08878;
+      --greige:       #9e9189;
+      --greige-light: #c8bfb8;
+      --blue-pale:    #dde4ea;
+      --charcoal:     #2e2a26;
+      --charcoal-lt:  #4a4540;
+      --text-muted:   #6e6860;
+
+      /* マーカー色 — くすみゴールド半透明 */
+      --marker:       rgba(196, 169, 100, 0.28);
+      --marker-rose:  rgba(176, 136, 120, 0.22);
+
+      /* Spacing — base (mobile) */
+      --sp-xs:  0.5rem;
+      --sp-sm:  1rem;
+      --sp-md:  1.75rem;
+      --sp-lg:  2.5rem;
+      --sp-xl:  4rem;
+      --sp-2xl: 6rem;
+      --sp-3xl: 9rem;
+
+      /* Type Scale */
+      --tx-xs:   0.72rem;
+      --tx-sm:   0.875rem;
+      --tx-base: 1rem;
+      --tx-lg:   1.125rem;
+      --tx-xl:   1.3rem;
+      --tx-2xl:  1.65rem;
+      --tx-3xl:  2.1rem;
+
+      /* Line Heights */
+      --lh-tight:   1.5;
+      --lh-normal:  1.9;
+      --lh-relaxed: 2.1;
+      --lh-loose:   2.5;
+
+      /* Layout */
+      --content-max: 1100px;
+      --prose-max:   680px;
+    }
+
+    /* ===== Reset ===== */
+    *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+    html { scroll-behavior:smooth; font-size:16px; }
+    body {
+      font-family: var(--font-serif);
+      background: var(--ivory);
+      color: var(--charcoal);
+      line-height: var(--lh-normal);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+      word-break: auto-phrase;
+      overflow-wrap: break-word;
+      text-wrap: pretty;
+    }
+    img { display:block; max-width:100%; height:auto; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; }
+
+    /* ===== Layout Containers ===== */
+    .full-bleed { width: 100%; }
+
+    .container {
+      max-width: var(--content-max);
+      margin: 0 auto;
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+    }
+
+    .prose {
+      max-width: min(var(--prose-max), 92vw);
+      margin: 0 auto;
+    }
+
+    section { padding: var(--sp-3xl) 0; }
+    section.compact { padding: var(--sp-2xl) 0; }
+
+    /* ===== Section Label ===== */
+    .label {
+      display: block;
+      font-family: var(--font-display);
+      font-size: var(--tx-xs);
+      letter-spacing: 0.28em;
+      color: var(--rose-muted);
+      text-transform: uppercase;
+      margin-bottom: var(--sp-md);
+    }
+
+    /* ===== Thin Rule ===== */
+    .rule {
+      width: 2rem;
+      height: 1px;
+      background: var(--rose-muted);
+      margin-bottom: var(--sp-xl);
+    }
+    .rule.center { margin-left:auto; margin-right:auto; }
+
+    /* ===== Typography ===== */
+    h1 {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(1.55rem, 5.5vw, 2.4rem);
+      line-height: var(--lh-loose);
+      letter-spacing: 0.04em;
+      text-wrap: pretty;
+    }
+    h2 {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(1.2rem, 4.5vw, 2rem);
+      line-height: var(--lh-relaxed);
+      letter-spacing: 0.04em;
+      text-wrap: pretty;
+    }
+    h3 {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(1.05rem, 1.8vw, 1.3rem);
+      line-height: var(--lh-relaxed);
+    }
+    p {
+      font-size: 1.05rem;
+      font-weight: 300;
+      line-height: var(--lh-relaxed);
+      margin-bottom: var(--sp-md);
+      text-wrap: pretty;
+    }
+    p:last-child { margin-bottom: 0; }
+
+    /* ===== マーカー装飾 ===== */
+    /* くすみゴールド：重要な気づき・共感ワード */
+    .mk {
+      background: linear-gradient(transparent 60%, var(--marker) 60%);
+      padding-bottom: 0.05em;
+    }
+    /* くすみローズ：感情・内面に触れる言葉 */
+    .mk-rose {
+      background: linear-gradient(transparent 60%, var(--marker-rose) 60%);
+      padding-bottom: 0.05em;
+    }
+    /* 強調ボックス（引用風） */
+    .highlight-line {
+      display: block;
+      border-left: 2px solid var(--rose-muted);
+      padding-left: var(--sp-md);
+      margin: var(--sp-lg) 0;
+      font-size: var(--tx-lg);
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: var(--lh-relaxed);
+    }
+
+    .italic-quote {
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2vw, 1.45rem);
+      color: var(--rose-deep);
+      line-height: var(--lh-loose);
+      margin: var(--sp-lg) 0;
+    }
+
+    /* ===== Lists ===== */
+    .dot-list { list-style:none; padding:0; }
+    .dot-list li {
+      position: relative;
+      padding: var(--sp-md) 0 var(--sp-md) 1.8rem;
+      border-bottom: 1px solid var(--blush);
+      font-size: var(--tx-base);
+      font-weight: 300;
+      line-height: var(--lh-relaxed);
+    }
+    .dot-list li:first-child { border-top: 1px solid var(--blush); }
+    .dot-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: calc(var(--sp-md) + 0.6em);
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: var(--rose-muted);
+      opacity: 0.55;
+    }
+
+    .dash-list { list-style:none; padding:0; }
+    .dash-list li {
+      position: relative;
+      padding: 0.5rem 0 0.5rem 1.5rem;
+      font-size: var(--tx-base);
+      font-weight: 300;
+      line-height: var(--lh-relaxed);
+    }
+    .dash-list li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--rose-muted);
+    }
+
+    /* ===== セッション内 アート・特典アイテム ===== */
+    .session-item {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      font-size: var(--tx-sm);
+      font-weight: 300;
+      line-height: var(--lh-relaxed);
+      margin-top: 0.3rem;
+    }
+    .session-item-mark {
+      flex-shrink: 0;
+      width: 0.45rem;
+      height: 0.45rem;
+      background: var(--rose-muted);
+      opacity: 0.7;
+      margin-top: 0.45em;
+    }
+    .session-item-mark.sq {
+      border-radius: 0;
+    }
+    .session-item-mark.circle {
+      border-radius: 50%;
+    }
+    .session-item-text {
+      color: var(--charcoal-lt);
+    }
+    .session-item-text.art {
+      color: var(--rose-deep);
+    }
+
+    /* ===== CTA Button ===== */
+    .btn {
+      display: inline-block;
+      padding: 1.1rem 2.8rem;
+      font-family: var(--font-serif);
+      font-size: var(--tx-sm);
+      font-weight: 300;
+      letter-spacing: 0.14em;
+      border: 1px solid var(--charcoal);
+      color: var(--charcoal);
+      background: transparent;
+      transition: background 0.4s, color 0.4s, border-color 0.4s;
+      text-align: center;
+      cursor: pointer;
+    }
+    .btn:hover { background: var(--charcoal); color: var(--ivory); }
+
+    .btn-filled {
+      background: var(--rose-deep);
+      color: var(--ivory);
+      border-color: var(--rose-deep);
+    }
+    .btn-filled:hover { background: var(--rose-muted); border-color: var(--rose-muted); }
+    .btn-lg { padding: 1.35rem 3.5rem; font-size: var(--tx-base); letter-spacing: 0.16em; }
+
+    /* ===== Scroll Animations ===== */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+    .fade-in {
+      opacity: 0;
+      transition: opacity 1.2s ease-out;
+    }
+    .fade-up.visible, .fade-in.visible { opacity:1; transform:translateY(0); }
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.22s; }
+    .d3 { transition-delay: 0.34s; }
+    .d4 { transition-delay: 0.46s; }
+    .d5 { transition-delay: 0.58s; }
+
+    @media (prefers-reduced-motion: reduce) {
+      .fade-up, .fade-in { opacity:1; transform:none; transition:none; }
+    }
+
+    /* =============================================
+       GLOBAL CENTER ALIGNMENT
+       全セクションのテキストを中央揃えに統一
+       ============================================= */
+    section { text-align: center; }
+    .prose { text-align: center; }
+    .label { text-align: center; }
+    .rule { margin-left: auto; margin-right: auto; }
+
+    /* 見出し・段落は中央揃え */
+    h1, h2, h3, h4 { text-align: center; }
+    p { text-align: center; }
+
+    /* リストは中央配置・左揃えテキスト（読みやすさ維持） */
+    .dot-list, .dash-list, #proposal .circle-list {
+      text-align: left;
+      display: inline-block;
+      width: 100%;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* 講座内容セクション（course-card）は全テキスト中央揃え */
+    .course-card { text-align: center; }
+    .course-badge { text-align: center; }
+    .course-name { text-align: center; }
+    .course-meta { text-align: center; }
+    .session-num { text-align: center; }
+    .session-title { text-align: center; }
+    .session-desc { text-align: center; }
+
+    /* セッションアイテムは中央配置・左揃えテキスト */
+    .session-items { display: flex; flex-direction: column; align-items: center; }
+    .session-item { text-align: left; justify-content: center; }
+
+    /* 変化グリッドは中央揃え */
+    .change-before, .change-after { text-align: center; }
+
+    /* FAQ・概要テーブルは左揃えを維持 */
+    .faq-answer, .overview-table { text-align: left; }
+    .faq-question { text-align: left; }
+
+    /* ハイライトライン（引用）は左揃え */
+    .highlight-line { text-align: left; }
+
+    /* 講師紹介テキスト */
+    .instructor-text { text-align: center; }
+
+    /* ヒーロー：常に中央揃え */
+    .hero-text-col h1,
+    .hero-text-col p,
+    .hero-text-col .hero-brand,
+    .hero-text-col .hero-tagline,
+    .hero-text-col .hero-sub { text-align: center; }
+    .hero-text-col .scroll-hint { align-items: center; }
+
+
+    /* =============================================
+       ① HERO — PC: 横並び2カラム / SP: 縦積み
+       ============================================= */
+    #hero {
+      background: var(--ivory);
+      overflow: hidden;
+      padding: 0;
+    }
+
+    .hero-inner {
+      display: flex;
+      flex-direction: column;
+      min-height: 100svh;
+    }
+
+    /* 上：写真 */
+    .hero-photo-col {
+      width: 100%;
+      background: var(--ivory);
+      flex-shrink: 0;
+    }
+    .hero-photo-col img {
+      width: 100%;
+      height: auto;
+      display: block;
+      max-height: 75svh;
+      object-fit: contain;
+      object-position: center;
+    }
+
+    /* 下：テキスト */
+    .hero-text-col {
+      padding: clamp(2.5rem, 5vw, 5rem) clamp(2rem, 8vw, 8rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      gap: var(--sp-lg);
+      flex: 1;
+    }
+
+    .hero-brand {
+      font-family: var(--font-display);
+      font-size: var(--tx-xs);
+      letter-spacing: 0.38em;
+      color: var(--greige);
+      text-transform: uppercase;
+    }
+
+    .hero-tagline {
+      font-family: var(--font-serif);
+      font-weight: 200;
+      font-size: clamp(0.875rem, 3.5vw, 1rem);
+      color: var(--charcoal-lt);
+      line-height: var(--lh-loose);
+      letter-spacing: 0.08em;
+    }
+
+    .hero-sub {
+      font-size: clamp(0.875rem, 3.5vw, 1rem);
+      color: var(--text-muted);
+      line-height: var(--lh-relaxed);
+      letter-spacing: 0.05em;
+    }
+
+    .scroll-hint {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.4rem;
+      color: var(--greige-light);
+      font-family: var(--font-display);
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      margin-top: var(--sp-md);
+    }
+    .scroll-hint::after {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 2.5rem;
+      background: linear-gradient(to bottom, var(--greige-light), transparent);
+      animation: scrollline 2.2s ease-in-out infinite;
+    }
+    @keyframes scrollline {
+      0%,100% { opacity:0.3; transform:scaleY(0.6); }
+      50%      { opacity:1;   transform:scaleY(1); }
+    }
+
+    /* SP: ヒーローは縦積み（共通レイアウトなので追加調整のみ） */
+    @media (max-width: 768px) {
+      .hero-photo-col img {
+        max-height: 55svh;
+      }
+      .hero-text-col {
+        padding: clamp(2rem, 8vw, 3.5rem) clamp(1.5rem, 6vw, 2.5rem);
+      }
+    }
+
+
+    /* =============================================
+       PHOTO DIVIDER
+       ============================================= */
+    .photo-divider {
+      width: 100%;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .photo-divider img {
+      width: 100%;
+      height: clamp(260px, 40vw, 520px);
+      object-fit: cover;
+      object-position: center;
+    }
+    .photo-divider.tall img {
+      height: clamp(320px, 50vw, 600px);
+    }
+    /* PC: 写真区切りは左右に余白を持たせた額縁風 */
+    .photo-divider.framed {
+      padding: 0 clamp(2rem, 6vw, 6rem);
+    }
+    .photo-divider.framed img {
+      height: clamp(300px, 45vw, 560px);
+    }
+
+    /* 写真全体表示（contain）クラス */
+    .photo-divider-contain {
+      background: var(--ivory);
+    }
+    .photo-divider-contain img {
+      width: 100%;
+      height: auto;
+      max-height: clamp(280px, 45vw, 540px);
+      object-fit: contain;
+      object-position: center;
+    }
+
+    /* 写真ごとの object-position */
+    .photo-divider .pos-writing   { object-position: center 35%; }
+    .photo-divider .pos-yaya-smile { object-position: 70% center; }
+    .photo-divider .pos-yaya-book  { object-position: 65% top; }
+    .photo-divider .pos-museum     { object-position: 28% center; }
+
+
+    /* =============================================
+       ② EMPATHY
+       ============================================= */
+    #empathy { background: var(--ivory-warm); }
+
+    .empathy-close {
+      margin-top: var(--sp-xl);
+      padding-top: var(--sp-lg);
+      border-top: 1px solid var(--blush);
+      text-align: center;
+      font-size: var(--tx-base);
+      font-weight: 300;
+      line-height: var(--lh-loose);
+    }
+    .empathy-close .accent {
+      display: block;
+      margin-top: var(--sp-md);
+      color: var(--rose-deep);
+      font-style: italic;
+      font-family: var(--font-display);
+      font-size: var(--tx-xl);
+    }
+
+
+    /* =============================================
+       ③ PROBLEM
+       ============================================= */
+    #problem { background: var(--ivory); }
+
+    .key-phrase {
+      display: block;
+      font-family: var(--font-serif);
+      font-weight: 400;
+      font-size: var(--tx-lg);
+      color: var(--charcoal);
+      line-height: var(--lh-relaxed);
+      margin: var(--sp-md) 0;
+    }
+
+
+    /* =============================================
+       ④ PROPOSAL
+       ============================================= */
+    #proposal { background: var(--blush); }
+
+    #proposal .circle-list { list-style:none; padding:0; margin: var(--sp-xl) 0; }
+    #proposal .circle-list li {
+      position: relative;
+      padding: 0.6rem 0 0.6rem 1.5rem;
+      font-size: var(--tx-base);
+      font-weight: 300;
+      line-height: var(--lh-relaxed);
+    }
+    #proposal .circle-list li::before {
+      content: '◦';
+      position: absolute;
+      left: 0;
+      color: var(--rose-muted);
+    }
+
+
+    /* =============================================
+       ⑤ DIFFERENCE — PC: 2カラム（テキスト＋写真）
+       ============================================= */
+    #difference { background: var(--ivory); }
+
+    .difference-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: start;
+    }
+    @media (max-width: 900px) {
+      .difference-layout { grid-template-columns: 1fr; }
+    }
+
+    .difference-photo {
+      position: sticky;
+      top: 4rem;
+    }
+    .difference-photo img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      /* 顔は左上寄り（約20%右、上から8%） */
+      object-position: 22% 8%;
+    }
+    @media (max-width: 900px) {
+      .difference-photo { position: static; }
+      .difference-photo img {
+        aspect-ratio: 16/9;
+        object-position: 22% 20%;
+      }
+    }
+
+    .why-art-box {
+      background: var(--ivory-warm);
+      padding: var(--sp-2xl) 0;
+      margin-top: var(--sp-2xl);
+    }
+
+    .phase-card {
+      padding: var(--sp-xl) 0;
+      border-bottom: 1px solid var(--blush);
+    }
+    .phase-card:last-child { border-bottom: none; }
+
+    .phase-num {
+      font-family: var(--font-display);
+      font-size: var(--tx-xs);
+      letter-spacing: 0.3em;
+      color: var(--rose-muted);
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .phase-title {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: var(--tx-lg);
+      color: var(--charcoal);
+      line-height: var(--lh-relaxed);
+      margin-bottom: var(--sp-md);
+    }
+
+    /* PC: Phase カードを3列グリッドに */
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--sp-xl) var(--sp-lg);
+      margin-top: var(--sp-xl);
+    }
+    .phase-grid .phase-card {
+      border-bottom: none;
+      border-top: 1px solid var(--blush);
+      padding: var(--sp-lg) 0 0;
+    }
+    @media (max-width: 768px) {
+      .phase-grid { grid-template-columns: 1fr; }
+      .phase-grid .phase-card { border-top: none; border-bottom: 1px solid var(--blush); padding: var(--sp-xl) 0; }
+      .phase-grid .phase-card:last-child { border-bottom: none; }
+    }
+
+
+    /* =============================================
+       CHANGE
+       ============================================= */
+    #change { background: var(--blue-pale); }
+
+    /* PC: 変化リストを2カラムに */
+    .change-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 var(--sp-2xl);
+      margin-top: var(--sp-xl);
+    }
+    @media (max-width: 768px) {
+      .change-grid { grid-template-columns: 1fr; }
+    }
+
+    .change-row {
+      padding: var(--sp-md) 0;
+      border-bottom: 1px solid rgba(0,0,0,0.07);
+    }
+    .change-row:first-child { border-top: 1px solid rgba(0,0,0,0.07); }
+
+    .change-before {
+      font-size: var(--tx-sm);
+      color: var(--text-muted);
+      font-weight: 300;
+      line-height: var(--lh-relaxed);
+      margin-bottom: 0.25rem;
+    }
+    .change-after {
+      font-size: var(--tx-base);
+      color: var(--charcoal);
+      font-weight: 300;
+      line-height: var(--lh-relaxed);
+    }
+    .arrow { color: var(--rose-muted); margin-right: 0.4rem; font-size: var(--tx-xs); }
+
+
+    /* =============================================
+       ART PHOTO STRIP
+       ============================================= */
+    .art-strip {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 0.5rem;
+      margin: var(--sp-2xl) 0;
+    }
+    .art-strip img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      object-position: center;
+    }
+    @media (max-width: 600px) {
+      .art-strip { grid-template-columns: 1fr 1fr; }
+      .art-strip img:last-child { grid-column: span 2; aspect-ratio: 16/7; }
+    }
+
+
+    /* =============================================
+       VOICE — お客様の声
+       ============================================= */
+    #voice { background: var(--ivory-warm); }
+
+    .voice-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-xl);
+      margin-top: var(--sp-xl);
+    }
+    @media (max-width: 768px) {
+      .voice-grid { grid-template-columns: 1fr; }
+    }
+
+    .voice-card {
+      background: var(--ivory);
+      padding: var(--sp-lg);
+      border-left: 2px solid var(--rose-muted);
+      position: relative;
+    }
+    .voice-card::before {
+      content: '\201C';
+      font-family: var(--font-display);
+      font-size: 3rem;
+      color: var(--blush-mid);
+      line-height: 1;
+      position: absolute;
+      top: 0.6rem;
+      left: 0.8rem;
+    }
+    .voice-text {
+      font-size: var(--tx-sm);
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: var(--lh-loose);
+      padding-top: 1.2rem;
+    }
+    .voice-keyword {
+      display: inline;
+      background: linear-gradient(transparent 55%, rgba(212,185,150,0.35) 55%);
+    }
+    .voice-from {
+      margin-top: var(--sp-md);
+      font-size: var(--tx-xs);
+      color: var(--rose-muted);
+      font-family: var(--font-display);
+      letter-spacing: 0.12em;
+    }
+    /* 5枚目のカードをPC幅で中央に */
+    .voice-grid .voice-card:last-child:nth-child(odd) {
+      grid-column: 1 / -1;
+      max-width: 560px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+
+    /* =============================================
+       ⑥ CONTENT — PC: BASIC/ADVANCEを横並び
+       ============================================= */
+    #content { background: var(--ivory); }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-xl);
+      margin-top: var(--sp-xl);
+    }
+    @media (max-width: 900px) {
+      .course-grid { grid-template-columns: 1fr; }
+    }
+
+    .course-card {
+      background: var(--ivory-warm);
+      padding: var(--sp-xl) var(--sp-lg);
+      border-top: 2px solid var(--rose-muted);
+    }
+
+    .course-badge {
+      font-family: var(--font-display);
+      font-size: var(--tx-xs);
+      letter-spacing: 0.3em;
+      color: var(--rose-deep);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.4rem;
+    }
+    .course-name {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: var(--tx-xl);
+      color: var(--charcoal);
+      line-height: var(--lh-relaxed);
+      margin-bottom: 0.2rem;
+    }
+    .course-meta {
+      font-size: var(--tx-sm);
+      color: var(--text-muted);
+      font-weight: 300;
+      margin-bottom: var(--sp-lg);
+      letter-spacing: 0.05em;
+    }
+
+    .session {
+      padding: var(--sp-md) 0;
+      border-bottom: 1px solid var(--blush);
+    }
+    .session:last-child { border-bottom: none; }
+
+    .session-num {
+      font-family: var(--font-display);
+      font-size: var(--tx-xs);
+      letter-spacing: 0.2em;
+      color: var(--rose-muted);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .session-title {
+      font-size: var(--tx-base);
+      font-weight: 400;
+      color: var(--charcoal);
+      line-height: var(--lh-normal);
+      margin-bottom: 0.2rem;
+    }
+    .session-desc {
+      font-size: var(--tx-sm);
+      color: var(--charcoal-lt);
+      font-weight: 300;
+      line-height: var(--lh-relaxed);
+    }
+    .session-items {
+      margin-top: 0.5rem;
+    }
+
+
+    /* =============================================
+       ⑦ INSTRUCTOR — PC: 写真左・テキスト右
+       ============================================= */
+    #instructor { background: var(--ivory-warm); }
+
+    .instructor-layout {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: clamp(3rem, 6vw, 7rem);
+      align-items: start;
+    }
+    @media (max-width: 960px) {
+      .instructor-layout { grid-template-columns: 1fr; }
+    }
+
+    .instructor-photo-col {
+      position: sticky;
+      top: 4rem;
+    }
+    @media (max-width: 960px) {
+      .instructor-photo-col { position: static; }
+    }
+
+    .instructor-photo {
+      position: relative;
+    }
+    .instructor-photo::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      width: 55%;
+      height: 55%;
+      border-right: 1px solid var(--blush-mid);
+      border-bottom: 1px solid var(--blush-mid);
+      pointer-events: none;
+    }
+    .instructor-photo img {
+      width: 100%;
+      aspect-ratio: 3/4;
+      object-fit: cover;
+      /* 縦長写真・顔は中央上部（上から15%） */
+      object-position: center 12%;
+    }
+    @media (max-width: 960px) {
+      .instructor-photo { max-width: 380px; margin: 0 auto var(--sp-xl); }
+    }
+
+    .instructor-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.2rem);
+      font-weight: 300;
+      letter-spacing: 0.18em;
+      color: var(--charcoal);
+      margin-bottom: 0.3rem;
+    }
+    .instructor-origin {
+      font-size: var(--tx-sm);
+      color: var(--text-muted);
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--sp-xl);
+    }
+
+    .credentials {
+      margin-top: var(--sp-xl);
+      padding-top: var(--sp-lg);
+      border-top: 1px solid var(--blush);
+    }
+    .credentials-label {
+      font-family: var(--font-display);
+      font-size: var(--tx-xs);
+      letter-spacing: 0.25em;
+      color: var(--rose-muted);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: var(--sp-md);
+    }
+    .credentials ul { list-style:none; padding:0; }
+    .credentials li {
+      font-size: var(--tx-sm);
+      font-weight: 300;
+      color: var(--charcoal-lt);
+      line-height: var(--lh-relaxed);
+      padding: 0.25rem 0;
+    }
+
+
+    /* =============================================
+       ⑧ FOR WHOM
+       ============================================= */
+    #for-whom { background: var(--ivory); }
+
+    .for-whom-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--sp-xl) clamp(var(--sp-xl), 6vw, var(--sp-2xl));
+      margin-top: var(--sp-xl);
+    }
+    @media (max-width: 600px) {
+      .for-whom-grid { grid-template-columns: 1fr; gap: var(--sp-lg); }
+    }
+
+    .for-whom-col h3 {
+      font-size: var(--tx-sm);
+      font-weight: 300;
+      letter-spacing: 0.1em;
+      margin-bottom: var(--sp-md);
+      padding-bottom: var(--sp-sm);
+      border-bottom: 1px solid var(--blush);
+    }
+    .for-whom-col.yes h3 { color: var(--rose-deep); }
+    .for-whom-col.no h3  { color: var(--greige); }
+
+    .for-whom-list { list-style:none; padding:0; }
+    .for-whom-list li {
+      font-size: var(--tx-sm);
+      font-weight: 300;
+      line-height: var(--lh-relaxed);
+      padding: 0.45rem 0;
+      color: var(--charcoal-lt);
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+    }
+
+
+    /* =============================================
+       ⑨ FAQ
+       ============================================= */
+    #faq { background: var(--ivory-warm); }
+
+    .faq-item { border-bottom: 1px solid var(--blush); }
+    .faq-item:first-child { border-top: 1px solid var(--blush); }
+
+    .faq-q {
+      width: 100%;
+      background: none;
+      border: none;
+      text-align: left;
+      padding: var(--sp-md) 0;
+      display: flex;
+      align-items: flex-start;
+      gap: var(--sp-sm);
+      font-family: var(--font-serif);
+      font-size: var(--tx-base);
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: var(--lh-relaxed);
+    }
+    .faq-q .q-mark {
+      font-family: var(--font-display);
+      font-size: var(--tx-sm);
+      color: var(--rose-muted);
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+      margin-top: 0.15em;
+    }
+    .faq-q .q-text { flex:1; }
+    .faq-q .q-icon {
+      flex-shrink: 0;
+      width: 0.9rem;
+      height: 0.9rem;
+      position: relative;
+      margin-top: 0.35em;
+    }
+    .faq-q .q-icon::before,
+    .faq-q .q-icon::after {
+      content: '';
+      position: absolute;
+      background: var(--greige);
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .faq-q .q-icon::before { width:100%; height:1px; top:50%; left:0; transform:translateY(-50%); }
+    .faq-q .q-icon::after  { width:1px; height:100%; top:0; left:50%; transform:translateX(-50%); }
+    .faq-item.open .faq-q .q-icon::after { transform:translateX(-50%) rotate(90deg); opacity:0; }
+
+    .faq-a {
+      display: none;
+      padding: 0 0 var(--sp-md) 2rem;
+      font-size: var(--tx-sm);
+      font-weight: 300;
+      color: var(--charcoal-lt);
+      line-height: var(--lh-loose);
+    }
+    .faq-item.open .faq-a { display: block; }
+
+
+    /* =============================================
+       ⑩ OVERVIEW
+       ============================================= */
+    #overview { background: var(--blush); }
+
+    .overview-tbl {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: var(--sp-xl);
+    }
+    .overview-tbl tr { border-bottom: 1px solid var(--blush-mid); }
+    .overview-tbl tr:first-child { border-top: 1px solid var(--blush-mid); }
+    .overview-tbl th {
+      padding: var(--sp-md) var(--sp-sm) var(--sp-md) 0;
+      font-family: var(--font-serif);
+      font-size: var(--tx-base);
+      font-weight: 300;
+      color: var(--rose-deep);
+      letter-spacing: 0.08em;
+      vertical-align: top;
+      width: 32%;
+      white-space: nowrap;
+    }
+    .overview-tbl td {
+      padding: var(--sp-md) 0;
+      font-size: var(--tx-base);
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: var(--lh-relaxed);
+      vertical-align: top;
+    }
+
+    .gift-box {
+      background: linear-gradient(135deg, #fdf6f0 0%, #f5ede4 100%);
+      padding: var(--sp-xl) var(--sp-lg);
+      margin-top: var(--sp-xl);
+      border: 1px solid var(--rose-muted);
+      border-left: 3px solid var(--rose-deep);
+      text-align: center;
+      position: relative;
+    }
+    .gift-box::before {
+      content: '— Special Gift —';
+      display: block;
+      font-family: var(--font-display);
+      font-style: italic;
+      font-size: 0.75rem;
+      letter-spacing: 0.3em;
+      color: var(--rose-muted);
+      margin-bottom: 0.75rem;
+    }
+    .gift-label {
+      font-family: var(--font-serif);
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+      letter-spacing: 0.2em;
+      color: var(--rose-deep);
+      font-weight: 400;
+      text-transform: none;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+    .gift-text {
+      font-size: clamp(1.15rem, 3.5vw, 1.45rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      line-height: var(--lh-relaxed);
+      letter-spacing: 0.06em;
+      margin-top: 0.4rem;
+    }
+    .gift-tagline {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      font-weight: 400;
+      color: var(--rose-deep);
+      line-height: 1.9;
+      letter-spacing: 0.08em;
+      margin-top: 1rem;
+    }
+    .gift-note {
+      font-size: var(--tx-xs);
+      color: var(--text-muted);
+      letter-spacing: 0.08em;
+      margin-top: 0.75rem;
+      line-height: 1.8;
+    }
+
+    /* 特典詳細セクション */
+    #gift-detail {
+      background: var(--ivory-warm);
+      padding: var(--sp-3xl) 0;
+    }
+    .gift-detail-inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 var(--sp-lg);
+      text-align: center;
+    }
+    .gift-detail-lead {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: 2;
+      letter-spacing: 0.06em;
+      margin-bottom: var(--sp-xl);
+    }
+    .gift-detail-title {
+      font-family: var(--font-serif);
+      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
+      font-weight: 400;
+      color: var(--rose-deep);
+      letter-spacing: 0.1em;
+      margin: var(--sp-xl) 0 var(--sp-md);
+    }
+    .gift-detail-body {
+      font-size: var(--tx-sm);
+      font-weight: 300;
+      color: var(--charcoal-lt);
+      line-height: 2;
+      letter-spacing: 0.05em;
+      margin-bottom: var(--sp-md);
+    }
+    .gift-check-list {
+      list-style: none;
+      padding: 0;
+      margin: var(--sp-md) auto;
+      display: inline-block;
+      text-align: left;
+    }
+    .gift-check-list li {
+      font-size: var(--tx-sm);
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: 1.9;
+      padding-left: 1.6em;
+      position: relative;
+      margin-bottom: 0.3rem;
+    }
+    .gift-check-list li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: var(--rose-deep);
+      font-size: 0.85em;
+    }
+    .gift-detail-quote {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 3vw, 1.15rem);
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: 2;
+      letter-spacing: 0.06em;
+      border-left: 3px solid var(--rose-muted);
+      padding: var(--sp-md) var(--sp-lg);
+      margin: var(--sp-xl) auto;
+      max-width: 560px;
+      text-align: left;
+      background: var(--ivory);
+    }
+    .gift-detail-map {
+      font-family: var(--font-serif);
+      font-size: clamp(1.05rem, 3vw, 1.2rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      line-height: 2;
+      letter-spacing: 0.06em;
+      margin: var(--sp-xl) 0;
+    }
+    .gift-detail-cta {
+      font-size: var(--tx-sm);
+      font-weight: 300;
+      color: var(--charcoal-lt);
+      line-height: 2;
+      letter-spacing: 0.05em;
+      margin-top: var(--sp-md);
+    }
+    .gift-detail-disclaimer {
+      font-size: var(--tx-xs);
+      color: var(--text-muted);
+      line-height: 1.8;
+      margin-top: var(--sp-xl);
+      padding-top: var(--sp-md);
+      border-top: 1px solid var(--blush);
+    }
+
+    /* ===== 得られる未来ボックス ===== */
+    .course-future {
+      margin-top: var(--sp-xl);
+      padding: var(--sp-lg) var(--sp-md);
+      background: linear-gradient(135deg, #fdf9f6 0%, #f5ede4 100%);
+      border-top: 2px solid var(--rose-muted);
+      border-radius: 2px;
+      text-align: center;
+    }
+    .course-future-label {
+      font-family: var(--font-sans);
+      font-size: var(--tx-xs);
+      letter-spacing: 0.18em;
+      color: var(--rose-deep);
+      text-transform: uppercase;
+      margin-bottom: var(--sp-sm);
+    }
+    .course-future-lead {
+      font-family: var(--font-serif);
+      font-size: clamp(0.95rem, 2.5vw, 1.05rem);
+      font-weight: 300;
+      color: var(--charcoal-lt);
+      line-height: 2;
+      letter-spacing: 0.06em;
+      margin-bottom: var(--sp-md);
+    }
+    .course-future-checks {
+      list-style: none;
+      padding: 0;
+      margin: var(--sp-md) auto;
+      display: inline-block;
+      text-align: left;
+    }
+    .course-future-checks li {
+      font-family: var(--font-serif);
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+      font-weight: 300;
+      color: var(--charcoal);
+      line-height: 2;
+      padding-left: 1.8em;
+      position: relative;
+      margin-bottom: 0.5rem;
+    }
+    .course-future-checks li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: var(--rose-deep);
+      font-size: 0.85em;
+      top: 0.1em;
+    }
+    .course-future-checks li span {
+      display: block;
+      font-size: 0.88em;
+      color: var(--text-muted);
+      padding-left: 0;
+      line-height: 1.7;
+    }
+    .course-future-body {
+      font-family: var(--font-serif);
+      font-size: clamp(0.9rem, 2.5vw, 1rem);
+      font-weight: 300;
+      color: var(--charcoal-lt);
+      line-height: 2;
+      letter-spacing: 0.05em;
+      margin: var(--sp-md) 0;
+    }
+    .course-future-closing {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 2.8vw, 1.1rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      line-height: 2;
+      letter-spacing: 0.06em;
+      margin-top: var(--sp-lg);
+      padding: var(--sp-md) var(--sp-lg);
+      border-left: 3px solid var(--rose-muted);
+      text-align: left;
+    }
+
+    /* ===== 講座キャッチコピー ===== */
+    .course-catch {
+      margin-bottom: var(--sp-lg);
+      padding: var(--sp-lg) var(--sp-md);
+      background: linear-gradient(160deg, #f9f3ef 0%, #efe4da 100%);
+      border-radius: 2px;
+      text-align: center;
+    }
+    .course-catch-label {
+      font-family: var(--font-sans);
+      font-size: var(--tx-xs);
+      letter-spacing: 0.18em;
+      color: var(--rose-deep);
+      text-transform: uppercase;
+      margin-bottom: var(--sp-sm);
+      opacity: 0.8;
+    }
+    .course-catch-copy {
+      font-family: var(--font-serif);
+      font-size: clamp(1.25rem, 4vw, 1.7rem);
+      font-weight: 400;
+      color: var(--charcoal);
+      line-height: 1.7;
+      letter-spacing: 0.08em;
+    }
+
+
+    /* =============================================
+       ⑪ CLOSING
+       ============================================= */
+    #closing {
+      background: var(--ivory);
+      text-align: center;
+      padding: var(--sp-3xl) 0;
+    }
+
+    .closing-poem {
+      font-family: var(--font-serif);
+      font-weight: 200;
+      font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+      line-height: var(--lh-loose);
+      color: var(--charcoal);
+      letter-spacing: 0.08em;
+      margin-bottom: var(--sp-2xl);
+    }
+    .closing-poem .accent {
+      color: var(--rose-deep);
+      font-style: italic;
+      font-family: var(--font-display);
+    }
+
+
+    /* =============================================
+       ⑫ CTA
+       ============================================= */
+    #cta {
+      background: var(--ivory-warm);
+      text-align: center;
+      padding: var(--sp-3xl) 0;
+    }
+
+    #cta .cta-lead {
+      font-family: var(--font-serif);
+      font-weight: 300;
+      font-size: clamp(1rem, 2vw, 1.2rem);
+      line-height: var(--lh-loose);
+      color: var(--charcoal);
+      margin-bottom: var(--sp-xl);
+    }
+    #cta .cta-body {
+      font-size: var(--tx-base);
+      color: var(--charcoal-lt);
+      font-weight: 300;
+      line-height: var(--lh-loose);
+      margin-bottom: var(--sp-xl);
+    }
+    #cta .cta-sign {
+      font-style: italic;
+      color: var(--charcoal);
+      font-size: var(--tx-base);
+      line-height: var(--lh-loose);
+      margin-bottom: var(--sp-xl);
+    }
+    #cta .cta-note {
+      font-size: var(--tx-xs);
+      color: var(--greige);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      margin-top: var(--sp-md);
+    }
+
+
+    /* =============================================
+       FOOTER
+       ============================================= */
+    footer {
+      background: var(--charcoal);
+      color: var(--greige-light);
+      padding: var(--sp-xl) var(--sp-md);
+      text-align: center;
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: var(--tx-sm);
+      letter-spacing: 0.28em;
+      color: var(--blush);
+      margin-bottom: 0.3rem;
+    }
+    .footer-by {
+      font-size: var(--tx-xs);
+      color: var(--greige);
+      font-weight: 300;
+      letter-spacing: 0.08em;
+      margin-bottom: var(--sp-md);
+    }
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: var(--sp-md);
+      flex-wrap: wrap;
+      margin-bottom: var(--sp-md);
+    }
+    .footer-links a {
+      color: var(--greige);
+      font-size: var(--tx-xs);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      transition: color 0.3s;
+    }
+    .footer-links a:hover { color: var(--blush); }
+    .footer-copy {
+      font-size: var(--tx-xs);
+      color: var(--greige);
+      font-weight: 300;
+    }
+
+
+    /* =============================================
+       RESPONSIVE — Spacing Scale
+       ============================================= */
+    @media (max-width: 768px) {
+      :root {
+        --sp-3xl: 5.5rem;
+        --sp-2xl: 4rem;
+        --sp-xl:  3rem;
+      }
+    }
+    @media (max-width: 480px) {
+      :root {
+        --sp-3xl: 4rem;
+        --sp-2xl: 3rem;
+        --sp-xl:  2.5rem;
+      }
+      .btn-lg { padding: 1.2rem 2.5rem; font-size: var(--tx-sm); }
+    }
+
+    /* PC: スマホ用改行タグを非表示 */
+    @media (min-width: 769px) {
+      .sp-br { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- =============================================
+     ① HERO
+     ============================================= -->
+<section id="hero">
+  <div class="hero-inner">
+
+    <!-- 左カラム：写真 -->
+    <div class="hero-photo-col fade-in">
+      <img
+        src="images/Z52_0556(2).webp"
+        alt="Refind Me Journey — 笑顔のYAYA"
+        loading="eager"
+      />
+    </div>
+
+    <!-- 右カラム：テキスト -->
+    <div class="hero-text-col">
+      <p class="hero-brand fade-in">REFIND ME JOURNEY</p>
+
+      <h1 class="fade-up d1">
+        もう、頑張り続ける人生を終わりにしませんか。
+      </h1>
+
+      <p class="hero-sub fade-up d2">
+        家族のため、仕事のため、ちゃんと生きてきたあなたへ。
+      </p>
+
+      <p class="hero-tagline fade-up d3">
+        これからは「私を大切にする時間」を取り戻す旅へ。やさしさを自分に返し、ほんとうの「私」とつながって生きる。
+      </p>
+
+      <div class="fade-up d4">
+        <a href="https://forms.gle/fd3Sv5XUnnRARJwr8" target="_blank" rel="noopener" class="btn">個別相談を申し込む（無料）</a>
+      </div>
+
+      <div class="scroll-hint fade-in d5">scroll</div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =============================================
+     ② EMPATHY
+     ============================================= -->
+<section id="empathy">
+  <div class="container">
+    <div class="prose">
+
+      <span class="label fade-up">If you spend such a day</span>
+      <div class="rule fade-up d1"></div>
+
+      <h2 class="fade-up d1">
+        こんな毎日を過ごしていませんか？
+      </h2>
+
+      <div style="height:var(--sp-xl)"></div>
+
+      <ul class="dot-list">
+        <li class="fade-up d1"><span class="mk">大きな不満はない。でも、満たされない</span></li>
+        <li class="fade-up d2"><span class="mk">「私が悪いのかも」と無意識に思ってしまう</span></li>
+        <li class="fade-up d3"><span class="mk">人と比べて、理由もなく疲れる</span></li>
+        <li class="fade-up d4"><span class="mk">これからの人生、どう生きたいかわからない</span></li>
+        <li class="fade-up d5"><span class="mk">変わりたい気持ちはあるけれど、動けない</span></li>
+      </ul>
+
+      <div class="empathy-close fade-up">
+        <p>
+          もし一つでも当てはまったなら、<span class="mk-rose">それはあなたが弱いからではありません。</span>
+        </p>
+        <span class="accent">ここまで、一人でがんばってきた証拠です。</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     PHOTO DIVIDER — ノートに書く手
+     ============================================= -->
+<div class="photo-divider framed photo-divider-contain">
+  <img src="images/Z52_0499(1).jpg" alt="ノートに書く手" loading="lazy" />
+</div>
+
+
+<!-- =============================================
+     ③ PROBLEM
+     ============================================= -->
+<section id="problem">
+  <div class="container">
+    <div class="prose">
+
+      <span class="label fade-up">The real reason</span>
+      <div class="rule fade-up d1"></div>
+
+      <h2 class="fade-up d1">
+        なぜ、こんな感覚になるのか
+      </h2>
+
+      <div style="height:var(--sp-xl)"></div>
+
+      <p class="fade-up">
+        あなたが感じているこのモヤモヤは、<span class="mk">努力不足でも、性格の問題でもありません。</span>
+      </p>
+
+      <p class="fade-up">
+        ただ一つ、
+        <span class="key-phrase"><span class="mk">自分の気持ちを後回しにする生き方が長く続いてきただけ。</span></span>
+      </p>
+
+      <ul class="dash-list fade-up">
+        <li>周りに合わせることが当たり前だった</li>
+        <li>一人でなんとかしようとしてきた</li>
+        <li>感情を扱う学びがなかった</li>
+      </ul>
+
+      <div style="height:var(--sp-xl)"></div>
+
+      <p class="fade-up">
+        だから、薄々気づいてはいたけれど「仕方ない」「みんなそう」と自分を納得させてきただけなのです。
+      </p>
+
+      <p class="italic-quote fade-up">
+        でも本当は——まだ、どこかで期待していませんか？
+      </p>
+
+      <p class="fade-up">
+        「変われるなら、変わってみたい」「残りの人生、もう少しワクワクしたい」
+      </p>
+
+      <p class="fade-up" style="font-weight:400; color:var(--charcoal);">
+        <span class="mk">その気持ちが残っているなら、まだ、諦めるタイミングではありません。</span>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     ④ PROPOSAL
+     ============================================= -->
+<section id="proposal">
+  <div class="container">
+    <div class="prose">
+
+      <span class="label fade-up">About Refind Me Journey</span>
+      <div class="rule fade-up d1"></div>
+
+      <h2 class="fade-up d1">REFIND ME JOURNEY とは</h2>
+
+      <div style="height:var(--sp-xl)"></div>
+
+      <p class="fade-up">
+        REFIND ME JOURNEY は、<span class="mk">自分を変える講座ではありません。</span>
+      </p>
+
+      <p class="fade-up">
+        これは、人生をやり直すためのプログラムではなく、人生を <em style="color:var(--rose-deep); font-style:italic;">"取り戻す"</em> ための旅。
+      </p>
+
+      <ul class="circle-list fade-up">
+        <li>感情とつながり直し</li>
+        <li>自分にやさしくなり</li>
+        <li>私の価値観と願いを思い出し</li>
+        <li>私の幸せを、私が選び始める</li>
+      </ul>
+
+      <p class="fade-up" style="font-size:var(--tx-lg); font-weight:300; line-height:var(--lh-relaxed);">
+        そんな <strong style="font-weight:400;">4か月間のプロセス</strong> です。
+      </p>
+
+      <div style="height:var(--sp-xl)"></div>
+      <div class="fade-up" style="text-align:center;">
+        <a href="https://forms.gle/fd3Sv5XUnnRARJwr8" target="_blank" rel="noopener" class="btn">個別相談を申し込む（無料）</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     ⑤ DIFFERENCE
+     ============================================= -->
+<section id="difference">
+  <div class="container">
+
+    <div class="difference-layout">
+
+      <!-- 左：写真（PC: sticky） -->
+      <div class="difference-photo fade-in">
+        <img src="images/Z52_0914.jpg" alt="植物の前に立つYAYA" loading="lazy" />
+      </div>
+
+      <!-- 右：テキスト -->
+      <div>
+        <span class="label fade-up">What makes us different</span>
+        <div class="rule fade-up d1"></div>
+
+        <h2 class="fade-up d1">
+          「わかる」よりも「感じる」から始める
+        </h2>
+
+        <div style="height:var(--sp-xl)"></div>
+
+        <p class="fade-up">
+          REFIND ME JOURNEY が他の自己理解講座と大きく違うのは、<span class="mk"><strong style="font-weight:400;">体験をとても大切にしていること</strong></span>です。
+        </p>
+
+        <p class="fade-up">
+          この講座では、人生の棚卸、価値観の整理や目標設定といったアプローチのほかに
+        </p>
+
+        <ul class="dash-list fade-up">
+          <li>アートワークをつくる</li>
+          <li>美術館で一緒に作品を味わう</li>
+          <li>正解のない世界に身を置く</li>
+        </ul>
+
+        <p class="fade-up" style="margin-top:var(--sp-md);">
+          といった<span class="mk-rose"><strong style="font-weight:400;">感覚から自分とつながる時間</strong></span>も用意しています。
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Why Art -->
+  <div class="why-art-box" style="margin-top:var(--sp-2xl);">
+    <div class="container">
+
+      <div class="prose" style="margin-bottom:var(--sp-xl);">
+        <span class="label fade-up">Why art experience</span>
+        <div class="rule fade-up d1"></div>
+
+        <h3 class="fade-up d1" style="font-size:clamp(1.15rem,2vw,1.4rem); margin-bottom:var(--sp-lg);">
+          なぜ、アート体験なのか？
+        </h3>
+
+        <p class="fade-up">
+          がんばってきた人ほど、「考える力」はもう十分にあります。
+        </p>
+
+        <p class="fade-up">
+          それでも苦しさが残るのは、<span class="mk"><strong style="font-weight:400;">感情が長い間、置き去りになってきたから。</strong></span>
+        </p>
+
+        <p class="fade-up">
+          最近では、心理学や教育、医療の分野でも、言葉や思考だけでは届きにくい心の領域に、アートや表現の力が注目されるようになってきました。
+        </p>
+      </div>
+
+      <!-- アート体験写真ストリップ -->
+      <div class="art-strip">
+        <img src="images/Z52_0780.webp" alt="アートワーク体験" loading="lazy" />
+        <img src="images/Z52_1239.JPG" alt="美術館でランタンの前にYAYA" loading="lazy" />
+        <img src="images/IMG_2250.webp" alt="カードコーチング体験" loading="lazy" />
+      </div>
+
+      <!-- Phase カード -->
+      <div class="phase-grid">
+        <div class="phase-card fade-up">
+          <span class="phase-num">Phase 01</span>
+          <p class="phase-title">正解のない世界に触れることが、心に安心を取り戻す</p>
+          <p style="font-size:var(--tx-sm); font-weight:300; color:var(--charcoal-lt); line-height:var(--lh-relaxed);">
+            感じること、味わうこと、正解のない世界に触れることが、心に安心を取り戻し、内側の声につながりやすくします。
+          </p>
+        </div>
+
+        <div class="phase-card fade-up d1">
+          <span class="phase-num">Phase 02</span>
+          <p class="phase-title">感情を無理に掘り下げなくても、自然にほどけていく力が育つ</p>
+          <p style="font-size:var(--tx-sm); font-weight:300; color:var(--charcoal-lt); line-height:var(--lh-relaxed);">
+            普段やらないことをする。評価されない表現をする。正解のない世界に触れることで、感情を無理に掘り下げなくても、自然にほどけていく力があります。
+          </p>
+        </div>
+
+        <div class="phase-card fade-up d2">
+          <span class="phase-num">Phase 03</span>
+          <p class="phase-title">本音につながると、本当の望みと繋がれるようになる</p>
+          <p style="font-size:var(--tx-sm); font-weight:300; color:var(--charcoal-lt); line-height:var(--lh-relaxed);">
+            「本当はこうしたかった」が見えてくる。自分の望みを否定せず受け取れ、自分に許可を出せるようになります。
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     CHANGE — 日常の変化
+     ============================================= -->
+<section id="change" class="compact">
+  <div class="container">
+
+    <div class="prose" style="margin-bottom:var(--sp-xl);">
+      <span class="label fade-up">Quiet changes in daily life</span>
+      <div class="rule fade-up d1"></div>
+
+      <h2 class="fade-up d1">
+        日常に起こる、静かな変化
+      </h2>
+
+      <p class="fade-up" style="margin-top:var(--sp-lg); color:var(--charcoal-lt);">
+        参加者の方からよく聞くのは、こんな声です。
+      </p>
+    </div>
+
+    <div class="change-grid">
+      <div class="change-row fade-up">
+        <p class="change-before">毎日、未来の心配ばかりだったのに</p>
+        <p class="change-after"><span class="arrow">→</span><span class="mk">これからの人生が、少し楽しみになった</span></p>
+      </div>
+      <div class="change-row fade-up d1">
+        <p class="change-before">人づきあいが億劫だったのに</p>
+        <p class="change-after"><span class="arrow">→</span><span class="mk">新しい出会いが楽しみになっている</span></p>
+      </div>
+      <div class="change-row fade-up">
+        <p class="change-before">感情が揺れると立ち直れなかったのに</p>
+        <p class="change-after"><span class="arrow">→</span><span class="mk">自分の軸に戻るのが早くなった</span></p>
+      </div>
+      <div class="change-row fade-up d1">
+        <p class="change-before">悩む時間が長かったのに</p>
+        <p class="change-after"><span class="arrow">→</span><span class="mk">選択と行動が自然に早くなった</span></p>
+      </div>
+    </div>
+
+    <p class="fade-up" style="margin-top:var(--sp-xl); font-style:italic; color:var(--charcoal-lt); line-height:var(--lh-loose); text-align:center;">
+      在り方が変わると、人生の感じ方そのものが変わっていきます。
+    </p>
+
+    <div style="height:var(--sp-xl)"></div>
+    <div class="fade-up" style="text-align:center;">
+      <a href="https://forms.gle/fd3Sv5XUnnRARJwr8" target="_blank" rel="noopener" class="btn">個別相談を申し込む（無料）</a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =============================================
+     PHOTO DIVIDER — ティーポットとカップ
+     ============================================= -->
+<div class="photo-divider framed photo-divider-contain">
+  <img src="images/Z52_0496.jpg" alt="ティーポットとカップとノート" loading="lazy" />
+</div>
+
+
+<!-- =============================================
+     VOICE — お客様の声
+     ============================================= -->
+<section id="voice">
+  <div class="container">
+
+    <div class="prose" style="margin-bottom:var(--sp-xl);">
+      <span class="label fade-up">Voices from participants</span>
+      <div class="rule fade-up d1"></div>
+
+      <h2 class="fade-up d1">
+        参加者の声
+      </h2>
+
+      <p class="fade-up" style="margin-top:var(--sp-lg); color:var(--charcoal-lt);">
+        ※ これはREFIND ME JOURNEYと同じ講師YAYAが開催した、過去のワークショップ参加者の声です。
+      </p>
+    </div>
+
+    <div class="voice-grid">
+
+      <div class="voice-card fade-up">
+        <p class="voice-text">
+          描いた絵に自己投影されているのを分析するのが興味深かったです。<span class="voice-keyword">自分の心の中を垣間見ることができました。</span>yayaさんの穏やかな笑顔と、みんなのほのぼのとした雰囲気で、楽しい一時でした。
+        </p>
+        <p class="voice-from">感情リリースアートワーク 参加者</p>
+      </div>
+
+      <div class="voice-card fade-up d1">
+        <p class="voice-text">
+          <span class="voice-keyword">絵を描くという行為を通じて、自分の中にある何かに気づいたり発見がありました。</span>創るということに集中することで、ごちゃごちゃしていた思考がスッキリした感覚がありました。とても有意義で癒される時間でした。
+        </p>
+        <p class="voice-from">感情リリースアートワーク 参加者</p>
+      </div>
+
+      <div class="voice-card fade-up">
+        <p class="voice-text">
+          まず絵を描くことで感覚や感性を開いて、そこから自分を振り返ったり未来を考えるという流れがとてもよかったです。<span class="voice-keyword">単純に言語化するよりも、絵によって感覚・感情を開いてからなので、よりスムーズで思わぬ気づきがありました。</span>
+        </p>
+        <p class="voice-from">感情リリースアートワーク 参加者</p>
+      </div>
+
+      <div class="voice-card fade-up d1">
+        <p class="voice-text">
+          自分にとって何が大切なんだろうって、改めて考え直す時間が持てたことがとてもよかったです。<span class="voice-keyword">作った生きがいマップに沿って、明日から新しい視点で自分の人生を歩みたいです。</span>
+        </p>
+        <p class="voice-from">いきがいマップワークショップ 参加者</p>
+      </div>
+
+      <div class="voice-card fade-up">
+        <p class="voice-text">
+          yayaさんの落ち着きあり、穏やかで、芯のしっかりとしたファシリテーションでは、<span class="voice-keyword">気持ちを委ねて安心して参加することができました。</span>普段大切にしていることを改めて心から大切にしたいと思える時間が沢山ありました。
+        </p>
+        <p class="voice-from">いきがいマップワークショップ 参加者</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =============================================
+     PHOTO DIVIDER — 美術館
+     ============================================= -->
+<div class="photo-divider framed photo-divider-contain">
+  <img src="images/PXL_20260121_022851792.webp" alt="美術館で作品を鑑賞するYAYA" loading="lazy" />
+</div>
+
+
+<!-- =============================================
+     ⑥ CONTENT
+     ============================================= -->
+<section id="content">
+  <div class="container">
+
+    <div class="prose" style="margin-bottom:var(--sp-xl);">
+      <span class="label fade-up">Course content</span>
+      <div class="rule fade-up d1"></div>
+
+      <h2 class="fade-up d1">
+        REFIND ME JOURNEY で実際にやること
+      </h2>
+
+      <p class="fade-up" style="margin-top:var(--sp-lg); color:var(--charcoal-lt);">
+        話を聞くだけの講座ではなく、体験を通して整えていくプロセスです。4か月を通して、「自分を知る → 感じる → 選べる」その土台を育てていきます。
+      </p>
+    </div>
+
+    <!-- BASIC / ADVANCE 横並び -->
+    <div class="course-grid">
+
+      <!-- BASIC -->
+      <div class="course-card fade-up">
+        <span class="course-badge">Basic</span>
+        <p class="course-name">自分を愛する旅</p>
+        <p class="course-meta">全4回 ／ 2か月</p>
+
+        <!-- キャッチコピー -->
+        <div class="course-catch fade-up">
+          <p class="course-catch-label">After this journey</p>
+          <p class="course-catch-copy">「私、このままでも<br>大丈夫かもしれない」</p>
+        </div>
+
+        <div class="session">
+          <span class="session-num">Session 01</span>
+          <p class="session-title">セルフコンパッション &amp; 感情とニーズ</p>
+          <p class="session-desc">感情の仕組みを知り、本音に気づく</p>
+          <div class="session-items">
+            <div class="session-item">
+              <span class="session-item-mark sq"></span>
+              <span class="session-item-text art">アート：自分への感謝の木</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="session">
+          <span class="session-num">Session 02</span>
+          <p class="session-title">自分史棚卸 ｜ 人生の山と谷</p>
+          <p class="session-desc">役割ではない「私」を思い出す</p>
+          <div class="session-items">
+            <div class="session-item">
+              <span class="session-item-mark sq"></span>
+              <span class="session-item-text art">アート：絡まる・つながる線</span>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="session">
+          <span class="session-num">Session 03</span>
+          <p class="session-title">いきがいマップ作り</p>
+          <p class="session-desc">価値観・喜び・強みを見える化</p>
+          <div class="session-items">
+            <div class="session-item">
+              <span class="session-item-mark sq"></span>
+              <span class="session-item-text art">アート：気持ちの温度</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <span class="session-num">Session 04</span>
+          <p class="session-title">いきがいマップ深掘り &amp; 振り返り</p>
+          <p class="session-desc">「私はこう感じていい」「これを大切にしたい」がわかる</p>
+          <div class="session-items">
+
+          </div>
+        </div>
+
+        <!-- 得られる未来 BASIC -->
+        <div class="course-future fade-up">
+          <p class="course-future-label">This journey will bring you</p>
+          <p class="course-future-lead">これまでずっと、<br>外側に合わせて生きてきたあなたが<br><br>はじめて、<br>自分の内側にやさしく戻っていく時間。<br><br>この2ヶ月で起こるのは、<br>劇的な変化ではなく<br><br>気づいたら、少しずつ<br>「自分との関係」が変わっていること。</p>
+          <ul class="course-future-checks">
+            <li>感情に振り回されるのではなく
+              <span>&ldquo;気づいてあげられる&rdquo;ようになる</span>
+            </li>
+            <li>「私が悪いのかも」という思考がゆるみ
+              <span>自分を責める時間が減っていく</span>
+            </li>
+            <li>頭ではなく、感覚で
+              <span>「これが好き」「これは違う」がわかるようになる</span>
+            </li>
+            <li>誰かの正解ではなく
+              <span>&ldquo;自分の感覚&rdquo;を大切にできるようになる</span>
+            </li>
+          </ul>
+          <p class="course-future-body">今までは<br>「どうすればうまくいくか」で選んできたことが<br><br>これからは<br>「私はどうしたい？」で選べるようになる。<br><br>それは、何かを足すことではなく<br><br>本来の自分を思い出しながら、<br>自分だけのプロセスを大切にしていきます。</p>
+
+        </div>
+      </div>
+
+      <!-- ADVANCE -->
+      <div class="course-card fade-up d1">
+        <span class="course-badge">Advance</span>
+        <p class="course-name">自分を咲かす旅</p>
+        <p class="course-meta">全4回 ／ 2か月</p>
+
+        <!-- キャッチコピー -->
+        <div class="course-catch fade-up">
+          <p class="course-catch-label">After this journey</p>
+          <p class="course-catch-copy">「これからの人生が、<br>少し楽しみ」</p>
+        </div>
+
+        <div class="session">
+          <span class="session-num">Session 05</span>
+          <p class="session-title">幸せホルモン &amp; ハッピーリスト</p>
+          <div class="session-items">
+            <div class="session-item">
+              <span class="session-item-mark sq"></span>
+              <span class="session-item-text art">アート：まるのつづき</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="session">
+          <span class="session-num">Session 06</span>
+          <p class="session-title">行動プラン &amp; 障害対策</p>
+          <div class="session-items">
+
+          </div>
+        </div>
+
+        <div class="session">
+          <span class="session-num">Session 07</span>
+          <p class="session-title">未来の手紙 &amp; 振り返り</p>
+        </div>
+
+        <div class="session">
+          <span class="session-num">Session 08</span>
+          <p class="session-title">統合アート体験</p>
+          <div class="session-items">
+            <div class="session-item">
+              <span class="session-item-mark circle"></span>
+              <span class="session-item-text">対話型鑑賞会（美術館）</span>
+            </div>
+            <div class="session-item">
+              <span class="session-item-mark sq"></span>
+              <span class="session-item-text art">わたしという花の制作（アートday）</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 得られる未来 ADVANCE -->
+        <div class="course-future fade-up">
+          <p class="course-future-label">This journey will bring you</p>
+          <p class="course-future-lead">自分を責めることが減り、<br>本音に触れられるようになったその先で<br><br>今度は、<br>&ldquo;自分の人生を選び直していく&rdquo;ステージへ。<br><br>ここでは、無理に頑張るのではなく<br><br>あなたの内側から自然に生まれる<br>「やってみたい」「こうしたい」を大切にしながら<br><br>少しずつ、行動へとつなげていきます。</p>
+          <ul class="course-future-checks">
+            <li>「やりたいけど怖い」があっても
+              <span>止まらずに、小さく動けるようになる</span>
+            </li>
+            <li>「こうしなきゃ」ではなく
+              <span>&ldquo;こうしたい&rdquo;で選択できるようになる</span>
+            </li>
+            <li>未来に対して不安よりも
+              <span>ほんの少しのワクワクが増えていく</span>
+            </li>
+            <li>人生を&ldquo;こなすもの&rdquo;から
+              <span>&ldquo;感じて生きるもの&rdquo;へと変わっていく</span>
+            </li>
+          </ul>
+          <p class="course-future-body">大きく変わる必要はありません。<br><br>ただ、少しずつ<br>自分の人生のハンドルを取り戻しながら<br><br>誰かの理想でも、正解でもない<br>「わたしの人生を生きている」という感覚を、<br>丁寧に扱っていきます。</p>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =============================================
+     ⑦ INSTRUCTOR
+     ============================================= -->
+<section id="instructor">
+  <div class="container">
+
+    <div class="instructor-layout">
+
+      <!-- 左：写真 -->
+      <div class="instructor-photo-col">
+        <div class="instructor-photo fade-in">
+          <img src="images/Z52_0513(2).jpg" alt="講師 YAYA" loading="lazy" />
+        </div>
+      </div>
+
+      <!-- 右：テキスト -->
+      <div>
+        <span class="label fade-up">Instructor</span>
+        <div class="rule fade-up d1"></div>
+
+        <p class="instructor-name fade-up d1">YAYA</p>
+        <p class="instructor-origin fade-up d2">台湾出身 ／ 日本在住</p>
+
+        <p class="fade-up">
+          40歳の年、家族の障害と病気が重なり、人生のどん底を経験しました。
+        </p>
+
+        <p class="fade-up">
+          自責や無力感、「もうハッピーは来ない」という諦め。「わたしの人生、このままでいいのかな？」私自身も、ずっとその問いを抱えて生きてきました。
+        </p>
+
+        <p class="fade-up">
+          それでも、<span class="mk">小さな希望だけは手放さずにいた私は、コーチング・心理学、そしてアートと出会います。</span>
+        </p>
+
+        <p class="fade-up">
+          「あなたは、そのままでいい」<span class="mk-rose">メンターからの言葉と、アートを通じた体験が、消化できなかった感情を静かに解放してくれました。</span>
+        </p>
+
+        <p class="italic-quote fade-up">
+          人は、変わるのではなく、<br>
+          本来の自分に還っていく。<br>
+          人生のキャンバスは、<br>
+          何度でも描きなおせる。
+        </p>
+
+        <p class="fade-up">
+          REFIND ME JOURNEY は、そんな私自身の体験から生まれました。
+        </p>
+
+        <div class="credentials fade-up">
+          <span class="credentials-label">資格・認定</span>
+          <ul>
+            <li>アナザーヒストリー認定 プロコーチ</li>
+            <li>IKIGAI Map ファシリテーター（ひふみコーチ）</li>
+            <li>Life Pages カードコーチング認定コーチ</li>
+            <li>TOILAB プラクティショナー</li>
+            <li>四柱推命鑑定師</li>
+            <li>Botany Painting 認定講師</li>
+            <li>パステル和（NAGOMI）アート認定講師</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =============================================
+     PHOTO DIVIDER — 笑顔のYAYA（本を持つ）
+     ============================================= -->
+<div class="photo-divider framed photo-divider-contain">
+  <img src="images/Z52_0534(3).jpg" alt="本を持ち微笑むYAYA" loading="lazy" />
+</div>
+
+
+<!-- =============================================
+     ⑧ FOR WHOM
+     ============================================= -->
+<section id="for-whom">
+  <div class="container">
+
+    <div class="prose" style="margin-bottom:var(--sp-xl);">
+      <span class="label fade-up">This journey is for you</span>
+      <div class="rule fade-up d1"></div>
+      <h2 class="fade-up d1">こんな方へ</h2>
+    </div>
+
+    <div class="for-whom-grid fade-up">
+      <div class="for-whom-col yes">
+        <h3>向いている方</h3>
+        <ul class="for-whom-list">
+          <li>一人でがんばるのが当たり前だった</li>
+          <li>人生後半を、このままで終わらせたくない</li>
+          <li>自分の本音を大切にしたい</li>
+          <li>やさしいペースで整えたい</li>
+        </ul>
+      </div>
+      <div class="for-whom-col no">
+        <h3>向いていない方</h3>
+        <ul class="for-whom-list">
+          <li>すぐに成果や変化がほしい</li>
+          <li>短期間で劇的に変わりたい</li>
+          <li>答えや正解だけを求めている</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- =============================================
+     ⑨ FAQ
+     ============================================= -->
+<section id="faq">
+  <div class="container">
+    <div class="prose">
+
+      <span class="label fade-up">Frequently asked questions</span>
+      <div class="rule fade-up d1"></div>
+
+      <h2 class="fade-up d1">よくある不安への答え</h2>
+
+      <div style="height:var(--sp-xl)"></div>
+
+      <div class="faq-item fade-up">
+        <button class="faq-q" aria-expanded="false">
+          <span class="q-mark">Q.</span>
+          <span class="q-text">ちゃんとできるか不安です</span>
+          <span class="q-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">
+          <p>大丈夫です。この講座は「できる人になる」ための講座ではありません。</p>
+          <p>話したくない時は無理しなくていい。宿題があってもご自身のペースで進めて大丈夫です。</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <button class="faq-q" aria-expanded="false">
+          <span class="q-mark">Q.</span>
+          <span class="q-text">感情を扱うのが少し怖いです</span>
+          <span class="q-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">
+          <p>無理に掘り下げることはしません。触れられるところまでが、この講座のルールです。</p>
+          <p>言葉にできないときは、感じるだけでも大丈夫。安全だと感じられる範囲で、一緒に進んでいきます。</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <button class="faq-q" aria-expanded="false">
+          <span class="q-mark">Q.</span>
+          <span class="q-text">アートが苦手です</span>
+          <span class="q-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">
+          <p>上手さやセンスは、一切関係ありません。感じたまま、今の気持ちのままで大丈夫です。</p>
+          <p>アートは「評価対象」ではなく、自分とつながるためのツールとして使います。</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <button class="faq-q" aria-expanded="false">
+          <span class="q-mark">Q.</span>
+          <span class="q-text">オンラインでもちゃんと参加できますか？</span>
+          <span class="q-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">
+          <p>はい。オンライン開催です。ご自宅など、安心できる場所からご参加いただけます。</p>
+          <p>美術館鑑賞だけは現地集合となります。</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <button class="faq-q" aria-expanded="false">
+          <span class="q-mark">Q.</span>
+          <span class="q-text">当日参加できない回があったらどうなりますか？</span>
+          <span class="q-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">
+          <p>アーカイブをご用意しています。体調やご家庭の事情などで参加できない場合も、後からご自身のペースで受講していただけます。</p>
+        </div>
+      </div>
+
+      <div class="faq-item fade-up">
+        <button class="faq-q" aria-expanded="false">
+          <span class="q-mark">Q.</span>
+          <span class="q-text">支払い方法が気になります</span>
+          <span class="q-icon" aria-hidden="true"></span>
+        </button>
+        <div class="faq-a">
+          <p>銀行振り込みでのお支払いが可能です。詳細はお申込み後に、個別にご案内いたします。</p>
+          <p>ご不明点があれば、いつでもご相談ください。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     ⑩ OVERVIEW
+     ============================================= -->
+<section id="overview">
+  <div class="container">
+    <div class="prose">
+
+      <span class="label fade-up">Course details</span>
+      <div class="rule fade-up d1"></div>
+
+      <h2 class="fade-up d1">講座概要</h2>
+
+      <table class="overview-tbl fade-up">
+        <tr>
+          <th>開催日程（予定）</th>
+          <td>
+            Basic: 5/15, 5/29, 6/12, 6/26<br>
+            Advance: 7/10, 7/24, 8/7, 8/21<br>
+            <span style="font-size:var(--tx-sm); color:var(--text-muted); margin-top:0.4em; display:inline-block;">毎回（金）13:00〜14:30</span>
+          </td>
+        </tr>
+        <tr>
+          <th>参加方法</th>
+          <td>オンライン（Zoom等）</td>
+        </tr>
+        <tr>
+          <th>定員</th>
+          <td>3名限定</td>
+        </tr>
+      </table>
+
+      <div class="gift-box fade-up">
+        <span class="gift-label">個別相談申込特典</span>
+        <p class="gift-text">四柱推命命式鑑定 &amp; 強み分析</p>
+        <p class="gift-tagline">「これでいいんだ」と思える<br>わたしの生き方が見えてくる</p>
+        <p class="gift-note">※個別相談ご参加の方限定<br>※今回限りの特別特典</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     GIFT DETAIL — 特典詳細セクション
+     ============================================= -->
+<section id="gift-detail">
+  <div class="gift-detail-inner fade-up">
+
+    <p class="gift-detail-lead">がんばってきたのに、<br>なぜかうまくいかない。<br><br>本当はどう生きたいのか、<br>わからなくなってしまうこと、ありませんか？<br><br>そんなときに必要なのは、<br>「もっと頑張ること」ではなく、<br><span style="font-style:italic;">&ldquo;本来の自分を知ること&rdquo;</span>かもしれません。</p>
+
+    <p class="gift-detail-body">今回、個別相談にお越しくださった方へ特別にご用意しているのが</p>
+    <p class="gift-detail-title">四柱推命命式鑑定 &amp; 強み分析</p>
+
+    <p class="gift-detail-body">四柱推命は、<br>生まれ持った性質や資質、<br>人生の流れや傾向を読み解く東洋の統計学。<br><br>でも、この鑑定でお伝えしたいのは<br>「当たる・当たらない」ではありません。</p>
+
+    <ul class="gift-check-list">
+      <li>なぜ今までしんどかったのか</li>
+      <li>どんな環境だと自分が満たされるのか</li>
+      <li>本来どんな強みや魅力を持っているのか</li>
+    </ul>
+
+    <p class="gift-detail-body">それを、やさしく言語化していきます。</p>
+
+    <div class="gift-detail-quote">
+      多くの方がこの鑑定で<br><br>
+      「これでよかったんだ…」と<br>自分を責める気持ちがふっと緩み、<br><br>
+      「こう生きてもいいんだ」と<br>自分に許可を出せるようになります。
+    </div>
+
+    <p class="gift-detail-body">さらに今回は、<br>命式から読み解いた資質をもとに</p>
+
+    <p class="gift-detail-title">あなたがすでに持っている<br>&ldquo;本来の強み&rdquo;もお伝えします</p>
+
+    <ul class="gift-check-list">
+      <li>頑張らなくても自然にできること</li>
+      <li>人から求められやすい役割</li>
+      <li>これから活かしていける可能性</li>
+    </ul>
+
+    <p class="gift-detail-body">「ないもの」ではなく<br>「すでにあるもの」に気づく時間です。</p>
+
+    <p class="gift-detail-map">この特典は、<br>ただの鑑定ではなく<br><br>これからの人生を<br>やさしく整えていくための<br><span style="font-style:italic;">&ldquo;はじまりの地図&rdquo;</span>のようなもの。</p>
+
+    <p class="gift-detail-body">もし今、<br>「このままでいいのかな」<br>そんな想いが少しでもあるなら<br><br>その答えのヒントを、<br>受け取りに来てください。</p>
+
+    <p class="gift-detail-cta">個別相談にご参加の方限定でプレゼントしています</p>
+
+    <p class="gift-detail-disclaimer">※この特典は、通常は有料で提供している内容ですが、<br>今回限り、個別相談にお越しいただいた方へ特別にお渡ししています。</p>
+
+  </div>
+</section>
+
+
+<!-- =============================================
+     PHOTO DIVIDER — 笑顔のYAYA（植物と）
+     ============================================= -->
+<div class="photo-divider framed photo-divider-contain">
+  <img src="images/Z52_0568(2).jpg" alt="笑顔のYAYA" loading="lazy" />
+</div>
+
+
+<!-- =============================================
+     ⑪ CLOSING MESSAGE
+     ============================================= -->
+<section id="closing">
+  <div class="container">
+    <div class="prose" style="text-align:center;">
+
+      <div class="rule center fade-up"></div>
+
+      <p class="closing-poem fade-up">
+        人生は、<br>
+        何度でもやり直せる。<br>
+        <br>
+        でもその前に、<br>
+        <span class="accent">自分とつながり直すこと</span><br>
+        が必要です。<br>
+        <br>
+        この旅を、<br>
+        一緒に歩けたら嬉しいです。
+      </p>
+
+      <div class="rule center fade-up"></div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     ⑫ CTA
+     ============================================= -->
+<section id="cta">
+  <div class="container">
+    <div class="prose">
+
+      <p class="cta-lead fade-up">
+        ここまで読んで、少しでも心が動いたなら、それだけで、もう十分です。
+      </p>
+
+      <p class="cta-body fade-up">
+        「本当に私に必要かな」「この年齢からでも大丈夫かな」
+
+        そんな迷いがあるのは、あなたが真剣に人生を考えている証拠。
+      </p>
+
+      <p class="cta-body fade-up">
+        「話を聞いてみたい」その気持ちがあるなら、それは、あなたの内側からのサインです。
+      </p>
+
+      <p class="cta-sign fade-up">
+        ぜひ個別相談にお越しください。あなたにお会いできますよう願います。
+      </p>
+
+      <div style="height:var(--sp-xl)"></div>
+
+      <div class="fade-up" style="text-align:center;">
+        <a href="https://forms.gle/fd3Sv5XUnnRARJwr8" target="_blank" rel="noopener" class="btn btn-filled btn-lg">
+          個別相談申し込みはこちら（無料）
+        </a>
+        <p class="cta-note">※ 無理な勧誘はありません。ご安心ください。</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- =============================================
+     FOOTER
+     ============================================= -->
+<footer>
+  <p class="footer-brand">REFIND ME JOURNEY</p>
+  <p class="footer-by">by YAYA</p>
+  <div class="footer-links">
+    <a href="#">特定商取引法について</a>
+    <a href="#">プライバシーポリシー</a>
+  </div>
+  <p class="footer-copy">© 2025 REFIND ME JOURNEY. All rights reserved.</p>
+</footer>
+
+
+<!-- =============================================
+     JAVASCRIPT
+     ============================================= -->
+<script>
+  // ===== Intersection Observer (Fade Animations) =====
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.07, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.fade-up, .fade-in').forEach(el => io.observe(el));
+
+  // ===== FAQ Accordion =====
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+
+      document.querySelectorAll('.faq-item').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      });
+
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
