@@ -819,6 +819,26 @@
     }
     .session:last-child { border-bottom: none; }
 
+    /* 特別体験ブロック */
+    .session-special {
+      margin-top: var(--sp-md);
+      padding: var(--sp-lg) var(--sp-md);
+      background: linear-gradient(160deg, #f0e8e2 0%, #e8ddd5 100%);
+      border-radius: 2px;
+      border-bottom: none;
+      border-left: 3px solid var(--rose-muted);
+    }
+    .session-num-special {
+      font-family: var(--font-sans);
+      font-size: var(--tx-xs);
+      letter-spacing: 0.2em;
+      color: var(--rose-deep);
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: 400;
+      text-transform: none;
+    }
+
     .session-num {
       font-family: var(--font-display);
       font-size: var(--tx-xs);
@@ -2034,12 +2054,17 @@
 
         <div class="session">
           <span class="session-num">Session 07</span>
-          <p class="session-title">未来の手紙 &amp; 振り返り</p>
+          <p class="session-title">50枚の絵を使ったビジョンワーク</p>
         </div>
 
         <div class="session">
           <span class="session-num">Session 08</span>
-          <p class="session-title">統合アート体験</p>
+          <p class="session-title">未来の手紙 &amp; 振り返り</p>
+        </div>
+
+        <div class="session session-special">
+          <span class="session-num session-num-special">特別体験</span>
+          <p class="session-title">統合アートday</p>
           <div class="session-items">
             <div class="session-item">
               <span class="session-item-mark circle"></span>
@@ -2047,7 +2072,7 @@
             </div>
             <div class="session-item">
               <span class="session-item-mark sq"></span>
-              <span class="session-item-text art">わたしという花の制作（アートday）</span>
+              <span class="session-item-text art">わたしという花の制作（アート体験）</span>
             </div>
           </div>
         </div>
