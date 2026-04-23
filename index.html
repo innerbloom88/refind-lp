@@ -772,23 +772,53 @@
        ============================================= */
     #content { background: var(--ivory); }
 
+    /* PC: BASIC/ADVANCEの各セクションの頭を左右で揃える */
     .course-grid {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: var(--sp-xl);
+      grid-template-rows: auto auto auto;
+      column-gap: var(--sp-xl);
+      row-gap: 0;
       margin-top: var(--sp-xl);
-      align-items: start;
+      align-items: stretch;
     }
     @media (max-width: 900px) {
-      .course-grid { grid-template-columns: 1fr; }
+      .course-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        gap: var(--sp-xl);
+      }
     }
 
     .course-card {
+      display: contents; /* 内部要素をグリッドに直接配置 */
+    }
+
+    /* 内包要素に個別スタイルを適用 */
+    .course-card-header {
       background: var(--ivory-warm);
-      padding: var(--sp-xl) var(--sp-lg);
+      padding: var(--sp-xl) var(--sp-lg) var(--sp-md);
       border-top: 2px solid var(--rose-muted);
-      display: flex;
-      flex-direction: column;
+      grid-row: 1;
+    }
+    .course-card-sessions {
+      background: var(--ivory-warm);
+      padding: 0 var(--sp-lg) var(--sp-md);
+      grid-row: 2;
+    }
+    .course-card-footer {
+      background: var(--ivory-warm);
+      padding: 0 var(--sp-lg) var(--sp-xl);
+      grid-row: 3;
+    }
+    @media (max-width: 900px) {
+      .course-card { display: flex; flex-direction: column; }
+      .course-card-header,
+      .course-card-sessions,
+      .course-card-footer { grid-row: auto; }
+      .course-card-header { padding: var(--sp-xl) var(--sp-lg) var(--sp-md); }
+      .course-card-sessions { padding: 0 var(--sp-lg) var(--sp-md); }
+      .course-card-footer { padding: 0 var(--sp-lg) var(--sp-xl); }
     }
 
     .course-badge {
@@ -1951,168 +1981,175 @@
 
       <!-- BASIC -->
       <div class="course-card fade-up">
-        <span class="course-badge">Basic</span>
-        <p class="course-name">自分を愛する旅</p>
-        <p class="course-meta">全4回 ／ 2か月</p>
 
-        <div class="session">
-          <span class="session-num">Session 01</span>
-          <p class="session-title">セルフコンパッション &amp; 感情とニーズ</p>
-          <p class="session-desc">感情の仕組みを知り、本音に気づく</p>
-          <div class="session-items">
-            <div class="session-item">
-              <span class="session-item-mark sq"></span>
-              <span class="session-item-text art">アート：自分への感謝の木</span>
-            </div>
-
-          </div>
+        <div class="course-card-header">
+          <span class="course-badge">Basic</span>
+          <p class="course-name">自分を感じる旅</p>
+          <p class="course-meta">全4回 ／ 2か月</p>
         </div>
 
-        <div class="session">
-          <span class="session-num">Session 02</span>
-          <p class="session-title">自分史棚卸 ｜ 人生の山と谷</p>
-          <p class="session-desc">役割ではない「私」を思い出す</p>
-          <div class="session-items">
-            <div class="session-item">
-              <span class="session-item-mark sq"></span>
-              <span class="session-item-text art">アート：絡まる・つながる線</span>
-            </div>
-
-          </div>
-        </div>
-
-        <div class="session">
-          <span class="session-num">Session 03</span>
-          <p class="session-title">いきがいマップ作り</p>
-          <p class="session-desc">価値観・喜び・強みを見える化</p>
-          <div class="session-items">
-            <div class="session-item">
-              <span class="session-item-mark sq"></span>
-              <span class="session-item-text art">アート：気持ちの温度</span>
+        <div class="course-card-sessions">
+          <div class="session">
+            <span class="session-num">Session 01</span>
+            <p class="session-title">セルフコンパッション &amp; 感情とニーズ</p>
+            <p class="session-desc">感情の仕組みを知り、本音に気づく</p>
+            <div class="session-items">
+              <div class="session-item">
+                <span class="session-item-mark sq"></span>
+                <span class="session-item-text art">アート：自分への感謝の木</span>
+              </div>
             </div>
           </div>
-        </div>
 
-        <div class="session">
-          <span class="session-num">Session 04</span>
-          <p class="session-title">いきがいマップ深掘り &amp; 振り返り</p>
-          <p class="session-desc">「私はこう感じていい」「これを大切にしたい」がわかる</p>
-          <div class="session-items">
+          <div class="session">
+            <span class="session-num">Session 02</span>
+            <p class="session-title">自分史棚卸 ｜ 人生の山と谷</p>
+            <p class="session-desc">役割ではない「私」を思い出す</p>
+            <div class="session-items">
+              <div class="session-item">
+                <span class="session-item-mark sq"></span>
+                <span class="session-item-text art">アート：絡まる・つながる線</span>
+              </div>
+            </div>
+          </div>
 
+          <div class="session">
+            <span class="session-num">Session 03</span>
+            <p class="session-title">いきがいマップ作り</p>
+            <p class="session-desc">価値観・喜び・強みを見える化</p>
+            <div class="session-items">
+              <div class="session-item">
+                <span class="session-item-mark sq"></span>
+                <span class="session-item-text art">アート：気持ちの温度</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="session">
+            <span class="session-num">Session 04</span>
+            <p class="session-title">いきがいマップ深掘り &amp; 振り返り</p>
+            <p class="session-desc">「私はこう感じていい」「これを大切にしたい」がわかる</p>
           </div>
         </div>
 
-        <!-- 得られる未来 BASIC -->
-        <div class="course-future fade-up">
-          <p class="course-future-label">This journey will bring you</p>
-          <p class="course-future-lead">これまでずっと、<br>外側に合わせて生きてきたあなたが<br><br>はじめて、<br>自分の内側にやさしく戻っていく時間。<br><br>この2ヶ月で起こるのは、<br>劇的な変化ではなく<br><br>気づいたら、少しずつ<br>「自分との関係」が変わっていること。</p>
-          <ul class="course-future-checks">
-            <li>感情に振り回されるのではなく
-              <span>&ldquo;気づいてあげられる&rdquo;ようになる</span>
-            </li>
-            <li>「私が悪いのかも」という思考がゆるみ
-              <span>自分を責める時間が減っていく</span>
-            </li>
-            <li>頭ではなく、感覚で
-              <span>「これが好き」「これは違う」がわかるようになる</span>
-            </li>
-            <li>誰かの正解ではなく
-              <span>&ldquo;自分の感覚&rdquo;を大切にできるようになる</span>
-            </li>
-          </ul>
-          <p class="course-future-body">今までは<br>「どうすればうまくいくか」で選んできたことが<br><br>これからは<br>「私はどうしたい？」で選べるようになる。<br><br>それは、何かを足すことではなく<br><br>本来の自分を思い出しながら、<br>自分だけのプロセスを大切にしていきます。</p>
+        <div class="course-card-footer">
+          <!-- 得られる未来 BASIC -->
+          <div class="course-future fade-up">
+            <p class="course-future-label">This journey will bring you</p>
+            <p class="course-future-lead">これまでずっと、<br>外側に合わせて生きてきたあなたが<br><br>はじめて、<br>自分の内側にやさしく戺っていく時間。<br><br>この2ヶ月で起こるのは、<br>劇的な変化ではなく<br><br>気づいたら、少しずつ<br>「自分との関係」が変わっていること。</p>
+            <ul class="course-future-checks">
+              <li>感情に振り回されるのではなく
+                <span>&ldquo;気づいてあげられる&rdquo;ようになる</span>
+              </li>
+              <li>「私が悪いのかも」という思考がゆるみ
+                <span>自分を责める時間が減っていく</span>
+              </li>
+              <li>頭ではなく、感覚で
+                <span>「これが好き」「これは違う」がわかるようになる</span>
+              </li>
+              <li>誰かの正解ではなく
+                <span>&ldquo;自分の感覚&rdquo;を大切にできるようになる</span>
+              </li>
+            </ul>
+            <p class="course-future-body">今までは<br>「どうすればうまくいくか」で選んできたことが<br><br>これからは<br>「私はどうしたい？」で選べるようになる。<br><br>それは、何かを足すことではなく<br><br>本来の自分を思い出しながら、<br>自分だけのプロセスを大切にしていきます。</p>
+          </div>
 
-        </div>
-
-        <!-- After this journey BASIC -->
-        <div class="course-after fade-up">
-          <p class="course-after-intro">この講座を受けた後には、こんな感覚になります</p>
-          <p class="course-catch-label">After this journey</p>
-          <p class="course-catch-copy">「私、このままでも<br>大丈夫かもしれない」</p>
+          <!-- After this journey BASIC -->
+          <div class="course-after fade-up">
+            <p class="course-after-intro">この講座を受けた後には、こんな感覚になります</p>
+            <p class="course-catch-label">After this journey</p>
+            <p class="course-catch-copy">「私、このままでも<br>大丈夫かもしれない」</p>
+          </div>
         </div>
 
       </div>
 
       <!-- ADVANCE -->
       <div class="course-card fade-up d1">
-        <span class="course-badge">Advance</span>
-        <p class="course-name">自分を咲かす旅</p>
-        <p class="course-meta">全4回 ／ 2か月</p>
 
-        <div class="session">
-          <span class="session-num">Session 05</span>
-          <p class="session-title">幸せホルモン &amp; ハッピーリスト</p>
-          <p class="session-desc">喜びの源を知り、日常に取り込む</p>
-          <div class="session-items">
-            <div class="session-item">
-              <span class="session-item-mark sq"></span>
-              <span class="session-item-text art">アート：まるのつづき</span>
+        <div class="course-card-header">
+          <span class="course-badge">Advance</span>
+          <p class="course-name">自分を和かす旅</p>
+          <p class="course-meta">全4回 ／ 2か月</p>
+        </div>
+
+        <div class="course-card-sessions">
+          <div class="session">
+            <span class="session-num">Session 05</span>
+            <p class="session-title">幸せホルモン &amp; ハッピーリスト</p>
+            <p class="session-desc">喜びの源を知り、日常に取り込む</p>
+            <div class="session-items">
+              <div class="session-item">
+                <span class="session-item-mark sq"></span>
+                <span class="session-item-text art">アート：まるのつづき</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="session">
+            <span class="session-num">Session 06</span>
+            <p class="session-title">行動プラン &amp; 障害対策</p>
+            <p class="session-desc">「やりたい」を「できる」に変える</p>
+          </div>
+
+          <div class="session">
+            <span class="session-num">Session 07</span>
+            <p class="session-title">50枚の絵を使ったビジョンワーク</p>
+            <p class="session-desc">イメージで未来の自分を描き出す</p>
+          </div>
+
+          <div class="session">
+            <span class="session-num">Session 08</span>
+            <p class="session-title">未来の手紙 &amp; 振り返り</p>
+            <p class="session-desc">旅を締めくくり、次へ踏み出す</p>
+          </div>
+
+          <div class="session session-special">
+            <span class="session-num session-num-special">特別体験</span>
+            <p class="session-title">統合アートday</p>
+            <div class="session-items">
+              <div class="session-item">
+                <span class="session-item-mark circle"></span>
+                <span class="session-item-text">対話型鑑賞会（美術館）</span>
+              </div>
+              <p class="session-desc" style="margin-left:1.2rem; margin-bottom:0.5rem;">アートを通じて「見る・感じる・語る」を体験する</p>
+              <div class="session-item">
+                <span class="session-item-mark sq"></span>
+                <span class="session-item-text art">わたしという花の制作（アート体験）</span>
+              </div>
+              <p class="session-desc" style="margin-left:1.2rem;">自分らしさを表現し、かたちにする</p>
             </div>
           </div>
         </div>
 
-        <div class="session">
-          <span class="session-num">Session 06</span>
-          <p class="session-title">行動プラン &amp; 障害対策</p>
-          <p class="session-desc">「やりたい」を「できる」に変える</p>
-        </div>
-
-        <div class="session">
-          <span class="session-num">Session 07</span>
-          <p class="session-title">50枚の絵を使ったビジョンワーク</p>
-          <p class="session-desc">イメージで未来の自分を描き出す</p>
-        </div>
-
-        <div class="session">
-          <span class="session-num">Session 08</span>
-          <p class="session-title">未来の手紙 &amp; 振り返り</p>
-          <p class="session-desc">旅を締めくくり、次へ踏み出す</p>
-        </div>
-
-        <div class="session session-special">
-          <span class="session-num session-num-special">特別体験</span>
-          <p class="session-title">統合アートday</p>
-          <div class="session-items">
-            <div class="session-item">
-              <span class="session-item-mark circle"></span>
-              <span class="session-item-text">対話型鑑賞会（美術館）</span>
-            </div>
-            <p class="session-desc" style="margin-left:1.2rem; margin-bottom:0.5rem;">アートを通じて「見る・感じる・語る」を体験する</p>
-            <div class="session-item">
-              <span class="session-item-mark sq"></span>
-              <span class="session-item-text art">わたしという花の制作（アート体験）</span>
-            </div>
-            <p class="session-desc" style="margin-left:1.2rem;">自分らしさを表現し、かたちにする</p>
+        <div class="course-card-footer">
+          <!-- 得られる未来 ADVANCE -->
+          <div class="course-future fade-up">
+            <p class="course-future-label">This journey will bring you</p>
+            <p class="course-future-lead">自分を責めることが減り、<br>本音に触れられるようになったその先で<br><br>今度は、<br>&ldquo;自分の人生を選び直していく&rdquo;ステージへ。<br><br>ここでは、無理に頑張るのではなく<br><br>あなたの内側から自然に生まれる<br>「やってみたい」「こうしたい」を大切にしながら<br><br>少しずつ、行動へとつなげていきます。</p>
+            <ul class="course-future-checks">
+              <li>「やりたいけど怖い」があっても
+                <span>止まらずに、小さく動けるようになる</span>
+              </li>
+              <li>「こうしなきゃ」ではなく
+                <span>&ldquo;こうしたい&rdquo;で選択できるようになる</span>
+              </li>
+              <li>未来に対して不安よりも
+                <span>ほんの少しのワクワクが増えていく</span>
+              </li>
+              <li>人生を&ldquo;こなすもの&rdquo;から
+                <span>&ldquo;感じて生きるもの&rdquo;へと変わっていく</span>
+              </li>
+            </ul>
+            <p class="course-future-body">大きく変わる必要はありません。<br><br>ただ、少しずつ<br>自分の人生のハンドルを取り戻しながら<br><br>誰かの理想でも、正解でもない<br>「わたしの人生を生きている」という感覚を、<br>丁寧に扱っていきます。</p>
           </div>
-        </div>
 
-        <!-- 得られる未来 ADVANCE -->
-        <div class="course-future fade-up">
-          <p class="course-future-label">This journey will bring you</p>
-          <p class="course-future-lead">自分を責めることが減り、<br>本音に触れられるようになったその先で<br><br>今度は、<br>&ldquo;自分の人生を選び直していく&rdquo;ステージへ。<br><br>ここでは、無理に頑張るのではなく<br><br>あなたの内側から自然に生まれる<br>「やってみたい」「こうしたい」を大切にしながら<br><br>少しずつ、行動へとつなげていきます。</p>
-          <ul class="course-future-checks">
-            <li>「やりたいけど怖い」があっても
-              <span>止まらずに、小さく動けるようになる</span>
-            </li>
-            <li>「こうしなきゃ」ではなく
-              <span>&ldquo;こうしたい&rdquo;で選択できるようになる</span>
-            </li>
-            <li>未来に対して不安よりも
-              <span>ほんの少しのワクワクが増えていく</span>
-            </li>
-            <li>人生を&ldquo;こなすもの&rdquo;から
-              <span>&ldquo;感じて生きるもの&rdquo;へと変わっていく</span>
-            </li>
-          </ul>
-          <p class="course-future-body">大きく変わる必要はありません。<br><br>ただ、少しずつ<br>自分の人生のハンドルを取り戻しながら<br><br>誰かの理想でも、正解でもない<br>「わたしの人生を生きている」という感覚を、<br>丁寧に扱っていきます。</p>
-
-        </div>
-
-        <!-- After this journey ADVANCE -->
-        <div class="course-after fade-up">
-          <p class="course-after-intro">この講座を受けた後には、こんな感覚になります</p>
-          <p class="course-catch-label">After this journey</p>
-          <p class="course-catch-copy">「これからの人生が、<br>少し楽しみ」</p>
+          <!-- After this journey ADVANCE -->
+          <div class="course-after fade-up">
+            <p class="course-after-intro">この講座を受けた後には、こんな感覚になります</p>
+            <p class="course-catch-label">After this journey</p>
+            <p class="course-catch-copy">「これからの人生が、<br>少し楽しみ」</p>
+          </div>
         </div>
 
       </div>
