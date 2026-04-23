@@ -777,6 +777,7 @@
       grid-template-columns: 1fr 1fr;
       gap: var(--sp-xl);
       margin-top: var(--sp-xl);
+      align-items: start;
     }
     @media (max-width: 900px) {
       .course-grid { grid-template-columns: 1fr; }
@@ -786,6 +787,8 @@
       background: var(--ivory-warm);
       padding: var(--sp-xl) var(--sp-lg);
       border-top: 2px solid var(--rose-muted);
+      display: flex;
+      flex-direction: column;
     }
 
     .course-badge {
@@ -1238,8 +1241,11 @@
 
     /* ===== 得られる未来ボックス ===== */
     .course-future {
-      margin-top: var(--sp-xl);
-      padding: var(--sp-lg) var(--sp-md);
+      margin-top: auto;
+      padding-top: var(--sp-xl);
+      padding-left: var(--sp-md);
+      padding-right: var(--sp-md);
+      padding-bottom: var(--sp-lg);
       background: linear-gradient(135deg, #fdf9f6 0%, #f5ede4 100%);
       border-top: 2px solid var(--rose-muted);
       border-radius: 2px;
