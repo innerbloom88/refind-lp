@@ -48,14 +48,14 @@
       --sp-2xl: 6rem;
       --sp-3xl: 9rem;
 
-      /* Type Scale */
-      --tx-xs:   0.72rem;
-      --tx-sm:   0.875rem;
-      --tx-base: 1rem;
-      --tx-lg:   1.125rem;
-      --tx-xl:   1.3rem;
-      --tx-2xl:  1.65rem;
-      --tx-3xl:  2.1rem;
+      /* Type Scale (10-15% increase for better readability) */
+      --tx-xs:   0.8rem;
+      --tx-sm:   0.95rem;
+      --tx-base: 1.1rem;
+      --tx-lg:   1.25rem;
+      --tx-xl:   1.45rem;
+      --tx-2xl:  1.85rem;
+      --tx-3xl:  2.4rem;
 
       /* Line Heights */
       --lh-tight:   1.5;
@@ -147,7 +147,7 @@
       line-height: var(--lh-relaxed);
     }
     p {
-      font-size: 1.05rem;
+      font-size: var(--tx-base);
       font-weight: 300;
       line-height: var(--lh-relaxed);
       margin-bottom: var(--sp-md);
@@ -1409,7 +1409,7 @@
     .closing-poem {
       font-family: var(--font-serif);
       font-weight: 200;
-      font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+      font-size: clamp(1.2rem, 2.5vw, 1.65rem);
       line-height: var(--lh-loose);
       color: var(--charcoal);
       letter-spacing: 0.08em;
@@ -1434,7 +1434,7 @@
     #cta .cta-lead {
       font-family: var(--font-serif);
       font-weight: 300;
-      font-size: clamp(1rem, 2vw, 1.2rem);
+      font-size: clamp(1.1rem, 2.2vw, 1.35rem);
       line-height: var(--lh-loose);
       color: var(--charcoal);
       margin-bottom: var(--sp-xl);
@@ -1530,6 +1530,10 @@
     @media (min-width: 769px) {
       .sp-br { display: none; }
     }
+    /* スマホ: PC用改行タグを非表示 */
+    @media (max-width: 768px) {
+      .pc-br { display: none; }
+    }
   </style>
 </head>
 <body>
@@ -1554,15 +1558,15 @@
       <p class="hero-brand fade-in">REFIND ME JOURNEY</p>
 
       <h1 class="fade-up d1">
-        もう、頑張り続ける人生を終わりにしませんか。
+        もう、頑張り続ける人生を<br class="sp-br">終わりにしませんか。
       </h1>
 
       <p class="hero-sub fade-up d2">
-        家族のため、仕事のため、ちゃんと生きてきたあなたへ。
+        家族のため、仕事のため、<br class="sp-br">ちゃんと生きてきたあなたへ。
       </p>
 
       <p class="hero-tagline fade-up d3">
-        これからは「私を大切にする時間」を取り戻す旅へ。やさしさを自分に返し、ほんとうの「私」とつながって生きる。
+        これからは「私を大切にする時間」を取り戻す旅へ。<br class="pc-br">やさしさを自分に返し、ほんとうの「私」とつながって生きる。
       </p>
 
       <div class="fade-up d4">
@@ -1602,7 +1606,7 @@
 
       <div class="empathy-close fade-up">
         <p>
-          もし一つでも当てはまったなら、<span class="mk-rose">それはあなたが弱いからではありません。</span>
+          もし一つでも当てはまったなら、<br class="sp-br"><span class="mk-rose">それはあなたが弱いからではありません。</span>
         </p>
         <span class="accent">ここまで、一人でがんばってきた証拠です。</span>
       </div>
@@ -1637,12 +1641,12 @@
       <div style="height:var(--sp-xl)"></div>
 
       <p class="fade-up">
-        あなたが感じているこのモヤモヤは、<span class="mk">努力不足でも、性格の問題でもありません。</span>
+        あなたが感じているこのモヤモヤは、<br class="sp-br"><span class="mk">努力不足でも、性格の問題でもありません。</span>
       </p>
 
       <p class="fade-up">
-        ただ一つ、
-        <span class="key-phrase"><span class="mk">自分の気持ちを後回しにする生き方が長く続いてきただけ。</span></span>
+        ただ一つ、<br class="sp-br">
+        <span class="key-phrase"><span class="mk">自分の気持ちを後回しにする生き方が<br class="sp-br">長く続いてきただけ。</span></span>
       </p>
 
       <ul class="dash-list fade-up">
@@ -1689,11 +1693,11 @@
       <div style="height:var(--sp-xl)"></div>
 
       <p class="fade-up">
-        REFIND ME JOURNEY は、<span class="mk">自分を変える講座ではありません。</span>
+        REFIND ME JOURNEY は、<br class="sp-br"><span class="mk">自分を変える講座ではありません。</span>
       </p>
 
       <p class="fade-up">
-        これは、人生をやり直すためのプログラムではなく、人生を <em style="color:var(--rose-deep); font-style:italic;">"取り戻す"</em> ための旅。
+        これは、人生をやり直すためのプログラムではなく、<br class="pc-br">人生を <em style="color:var(--rose-deep); font-style:italic;">"取り戻す"</em> ための旅。
       </p>
 
       <ul class="circle-list fade-up">
@@ -2505,21 +2509,20 @@
     <div class="prose">
 
       <p class="cta-lead fade-up">
-        ここまで読んで、少しでも心が動いたなら、それだけで、もう十分です。
+        ここまで読んで、少しでも心が動いたなら、<br class="sp-br">それだけで、もう十分です。
       </p>
 
       <p class="cta-body fade-up">
-        「本当に私に必要かな」「この年齢からでも大丈夫かな」
-
-        そんな迷いがあるのは、あなたが真剣に人生を考えている証拠。
+        「本当に私に必要かな」<br class="sp-br">「この年齢からでも大丈夫かな」<br><br>
+        そんな迷いがあるのは、<br class="sp-br">あなたが真剣に人生を考えている証拠。
       </p>
 
       <p class="cta-body fade-up">
-        「話を聞いてみたい」その気持ちがあるなら、それは、あなたの内側からのサインです。
+        「話を聞いてみたい」その気持ちがあるなら、<br class="sp-br">それは、あなたの内側からのサインです。
       </p>
 
       <p class="cta-sign fade-up">
-        ぜひ個別相談にお越しください。あなたにお会いできますよう願います。
+        ぜひ個別相談にお越しください。<br class="sp-br">あなたにお会いできますよう願います。
       </p>
 
       <div style="height:var(--sp-xl)"></div>
